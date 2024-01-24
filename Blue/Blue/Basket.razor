@@ -1,0 +1,26 @@
+﻿@inject ICartService cartService
+@implements IDisposable
+
+<div id="basket" class="blue-basket">
+    <div class="@(cartService.IsEmpty ? "empty" : "filled")">
+        Basket: @cartService.Count item(s)
+    </div>
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        cartService.Changed += UpdateCart;
+        base.OnInitialized();
+    }
+
+    public void Dispose()
+    {
+        cartService.Changed -= UpdateCart;
+    }
+
+    private void UpdateCart(object? sender, EventArgs e)
+    {
+        InvokeAsync(StateHasChanged);
+    }
+}

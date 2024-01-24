@@ -1,0 +1,19 @@
+<Project Sdk="Piral.Blazor.Sdk/0.4.0-preview.7637863202">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Version>0.1.0</Version>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AppShell>Piral.Blazor.Server.Samples.Tractor.Emulator/0.1.3</AppShell>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Piral.Blazor.Server.Samples.Tractor.Emulator" Version="0.1.3" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

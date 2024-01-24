@@ -1,0 +1,21 @@
+﻿@page "/"
+@page "/{ProductId}"
+@using Piral.Blazor.Shared
+
+<PageTitle>Products</PageTitle>
+
+<MfComponent Name="products" Parameters="@GetProductsParameters()" />
+
+@code {
+    [Parameter]
+    public string? ProductId { get; set; }
+
+    private IDictionary<string, object> GetProductsParameters()
+    {
+        var parameters = new Dictionary<string, object>();
+
+        parameters.Add("id", ProductId ?? "porsche");
+
+        return parameters;
+    }
+}

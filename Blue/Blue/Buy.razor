@@ -1,0 +1,23 @@
+﻿@inject ICartService cartService
+
+<div id="buy" class="blue-basket">
+    <form method="POST" @onsubmit="Submit">
+        <button>
+            <span class="buy-icon"></span>
+            <span>buy for @Price</span>
+        </button>
+    </form>
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; } = "porsche";
+
+    [Parameter]
+    public decimal Price { get; set; } = 0m;
+
+    public void Submit()
+    {
+        cartService.AddToCart(new ProductItem(Id, Price));
+    }
+}
