@@ -9,10 +9,11 @@ public class Module : IMfModule
 
     public Task Setup(IMfAppService app)
     {
-        app.PrependStyleSheet("basket-info.css");
-        app.PrependStyleSheet("buy-button.css");
         app.MapComponent<Buy>("buy");
         app.MapComponent<Basket>("basket");
+#if DEBUG
+        app.MapComponent<DebugView>("products");
+#endif
         return Task.CompletedTask;
     }
 
