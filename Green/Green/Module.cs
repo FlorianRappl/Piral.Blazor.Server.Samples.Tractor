@@ -11,13 +11,15 @@ public class Module : IMfModule
     {
         app.PrependStyleSheet("recommendations.css");
         app.MapComponent<Recommendations>("recommendations");
-#if DEBUG
+
         // just for debug purposes we register this as "products"
         // which will display the recommendations already
         // -- luckily this uses the same parameter, otherwise
         // -- we'd need to wrap etc.
-        app.MapComponent<Recommendations>("products");
-#endif
+
+        //#if DEBUG
+        //        app.MapComponent<Recommendations>("products");
+        //#endif
         return Task.CompletedTask;
     }
 
