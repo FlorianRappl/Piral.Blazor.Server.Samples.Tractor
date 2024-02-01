@@ -30,7 +30,6 @@ app.UseAntiforgery();
 
 app.UseMicrofrontends();
 
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+app.MapMicrofrontends<App>();
 
 app.Run();

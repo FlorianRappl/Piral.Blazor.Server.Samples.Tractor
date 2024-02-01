@@ -10,7 +10,7 @@ public class Module : IMfModule
     public Task Setup(IMfAppService app)
     {
         app.PrependStyleSheet("product-page.css");
-        app.MapComponent<Products>("products");
+        app.MapRoute<Products>();
         return Task.CompletedTask;
     }
 

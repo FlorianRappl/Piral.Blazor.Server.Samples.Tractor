@@ -1,4 +1,7 @@
-﻿@inject IProductService productService
+﻿@page "/products"
+@page "/products/{Id}"
+
+@inject IProductService productService
 @inject IMfService mfService
 
 <div class="product-page-grid">
@@ -15,18 +18,20 @@
     <div id="options">
         @foreach (var product in productService.GetProducts())
         {
-            <a class="@(Id == product.Id ? "active" : "")" href="/@product.Id">
+            <a class="@(ProductId == product.Id ? "active" : "")" href="/products/@product.Id">
                 <img src="@mfService.GetLink(product.Thumb)" alt="@Product.Name" />
             </a>
         }
     </div>
-    <MfComponent Name="buy" Id="@Id" Price="@Product.Price" />
-    <MfComponent Name="recommendations" Id="@Id" />
+    <MfComponent Name="buy" Id="@ProductId" Price="@Product.Price" />
+    <MfComponent Name="recommendations" Id="@ProductId" />
 </div>
 
 @code {
     [Parameter]
-    public string Id { get; set; } = "porsche";
+    public string? Id { get; set; }
 
-    private ProductItem Product => productService.GetProduct(Id) ?? productService.GetProducts().First();
+    public string ProductId => Id ?? "porsche";
+
+    private ProductItem Product => productService.GetProduct(ProductId) ?? productService.GetProducts().First();
 }
