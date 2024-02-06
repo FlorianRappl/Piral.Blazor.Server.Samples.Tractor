@@ -25,13 +25,22 @@
     </div>
     <MfComponent Name="buy" Id="@ProductId" Price="@Product.Price" />
     <MfComponent Name="recommendations" Id="@ProductId" />
+    <Foo @ref=foo />
 </div>
 
 @code {
+    private Foo? foo;
+
     [Parameter]
     public string? Id { get; set; }
 
     public string ProductId => Id ?? "porsche";
 
     private ProductItem Product => productService.GetProduct(ProductId) ?? productService.GetProducts().First();
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        foo?.Wuff();
+        base.OnAfterRender(firstRender);
+    }
 }
