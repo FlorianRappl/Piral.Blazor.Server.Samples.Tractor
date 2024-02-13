@@ -1,11 +1,11 @@
-﻿<Project Sdk="Piral.Blazor.Sdk/0.4.0-preview.7797649507">
+﻿<Project Sdk="Piral.Blazor.Sdk/0.4.0-preview.7889205161">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Version>0.1.0</Version>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AppShell>Piral.Blazor.Server.Samples.Tractor.Emulator/0.1.5</AppShell>
+    <AppShell>Piral.Blazor.Server.Samples.Tractor.Emulator/0.1.7</AppShell>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Piral.Blazor.Server.Samples.Tractor.Emulator" Version="0.1.5" PrivateAssets="all" />
+    <PackageReference Include="Piral.Blazor.Server.Samples.Tractor.Emulator" Version="0.1.7" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(Configuration)' == 'Debug'">

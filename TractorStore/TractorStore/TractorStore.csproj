@@ -1,16 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-	<AssemblyName>Piral.Blazor.Server.Samples.Tractor</AssemblyName>
-	<Version>0.1.5</Version>
+    <AssemblyName>Piral.Blazor.Server.Samples.Tractor</AssemblyName>
+    <Version>0.1.7</Version>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Piral.Blazor.Orchestrator" Version="0.4.0-preview.7797649507" />
-	<PackageReference Include="Piral.Blazor.Shared" Version="0.4.0-preview.7797649507" />
+    <PackageReference Include="Piral.Blazor.Orchestrator" Version="0.4.0-preview.7889205161" />
+    <PackageReference Include="Piral.Blazor.Shared" Version="0.4.0-preview.7889205161" />
   </ItemGroup>
 
 </Project>
