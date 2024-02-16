@@ -2,15 +2,15 @@
 
   <PropertyGroup>
     <AssemblyName>Piral.Blazor.Server.Samples.Tractor</AssemblyName>
-    <Version>0.1.7</Version>
+    <Version>0.1.8</Version>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Piral.Blazor.Orchestrator" Version="0.4.0-preview.7889205161" />
-    <PackageReference Include="Piral.Blazor.Shared" Version="0.4.0-preview.7889205161" />
+    <PackageReference Include="Piral.Blazor.Orchestrator" Version="0.4.1" />
+    <PackageReference Include="Piral.Blazor.Shared" Version="0.4.1" />
   </ItemGroup>
 
 </Project>
