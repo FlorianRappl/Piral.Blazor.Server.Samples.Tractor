@@ -1,4 +1,4 @@
-﻿<Project Sdk="Piral.Blazor.Sdk/0.4.0-preview.7889205161">
+﻿<Project Sdk="Piral.Blazor.Sdk/0.4.1">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
